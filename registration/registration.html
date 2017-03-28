@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+
+    <input id="new" type="button" value="Register new applicant" />
+
+    <form id="add" method="post">
+        <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+        <input type="text" id="roll_no" name="roll_no" placeholder="Roll No." required>
+        <input type="text" id="div" name="div" placeholder="Class" required>
+        <input type="text" id="mob" name="mob" placeholder="Contact No." required>
+        <input type="text" id="email_id" name="email_id" placeholder="Email-Id" required>
+        <input type="text" id="receipt_no" name="receipt_no" placeholder="Receipt No." required>
+        <input type="text" id="board_mem" name="board_mem" placeholder="Board member" required>
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+    <div id="result"></div>
+
+
+    <table id="list" align="center" cellpadding="0" cellspacing="0" width="700">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Roll No.</th>
+            <th>Class</th>
+            <th>Contact No</th>
+            <th>Email-id</th>
+            <th>Receipt No.</th>
+            <th>Board Member</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <!--	<tr><td><input size='6 type='text' id='id'></td>
+	<td><input size='6 type='text' id='name'></td>
+	<td><input size='6 type='text' id='roll_no'></td>
+	<td><input size='6 type='text' id='div'></td>
+	<td><input size='6 type='text' id='mob'></td>
+	<td><input size='6 type='text' id='email_id'></td>
+	<td><input size='6 type='text' id='receipt_no'></td>
+	<td><input size='6 type='text' id='board_mem'></td>
+	<td><input type='button' id='save' value='save' ></td>
+	<td><input type='button' id='del' value='Delete'></td></tr>
+-->
+    </table>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/reg.js"></script>
+
+</body>
+
+</html>

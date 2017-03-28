@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="images/icon.png">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	
+	<title>CSI NSIT</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<header>
+				<div class="col-md-6 col-sm-4 col-xs-4">
+					<img src="images/csi_logo.png" alt="CSI NSIT Logo">
+				</div>
+
+				<div class="col-md-6 col-sm-8 col-sm-8 text-right text-uppercase">
+					<h1>CSI NSIT</h1>
+				</div>
+			</header>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+			<hr>
+				<form  action="login.php" id = "login_form" method="POST" >
+					<div class="form-group">
+						<label>Username*</label>
+						<input type="username" class="form-control" placeholder="username" name="username" required autofocus>
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" class="form-control" placeholder="Password" name="pass" required>
+					</div>
+					<button type="submit" class="btn btn-default" name="submit" onClick="formSubmit()">Submit</button>
+				</form>
+				<hr>
+				<a href ="register.html"><button class="btn btn-default">New user? Register</button>
+			</div>
+		</div>		
+	</div>
+
+	<script type="text/javascript">
+		$("form#login_form").submit(function(){
+
+		    var formData = new FormData($(this)[0]);
+
+		    $.ajax({
+		        url: window.location.pathname,
+		        type: 'POST',
+		        data: formData,
+		        async: false,
+		        cache: false,
+		        contentType: false,
+		        processData: false,
+		        success: function (data) {
+		            alert(data)
+		        }        
+		    });
+
+		    return false;
+		});
+	</script>
+</body>
+</html>
